@@ -1,0 +1,128 @@
+﻿USE [DyDatabase]
+GO
+/****** Object:  Table [dbo].[CMN_Characters]    Script Date: 27.06.2022 13:51:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CMN_Characters](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nchar](1) NOT NULL,
+	[LanguageId] [smallint] NOT NULL,
+	[CreateDate] [datetime] NULL,
+	[UpdateDate] [datetime] NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [uniqueidentifier] NULL,
+ CONSTRAINT [PK_Characters] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[CMN_Languages]    Script Date: 27.06.2022 13:51:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CMN_Languages](
+	[Id] [smallint] IDENTITY(1,1) NOT NULL,
+	[Name] [nchar](100) NOT NULL,
+	[CreateDate] [datetime] NULL,
+	[UpdateDate] [datetime] NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [uniqueidentifier] NULL,
+ CONSTRAINT [PK_Languages] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[P_RndData]    Script Date: 27.06.2022 13:51:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[P_RndData](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[CharactersId] [int] NOT NULL,
+	[CreateDate] [datetime] NULL,
+	[UpdateDate] [datetime] NULL,
+	[IsActive] [bit] NULL,
+	[IsDeleted] [uniqueidentifier] NOT NULL,
+ CONSTRAINT [PK_RndData] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[CMN_Characters] ON 
+
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (1, N'A', 1, CAST(N'2022-06-26T14:11:45.293' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (2, N'B', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (3, N'C', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (4, N'Ç', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (5, N'D', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (6, N'E', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (7, N'F', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (8, N'G', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (9, N'Ğ', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (10, N'H', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (11, N'İ', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (12, N'I', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (13, N'J', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (14, N'K', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (15, N'L', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (16, N'M', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (17, N'N', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (18, N'O', 1, CAST(N'2022-06-26T14:11:45.307' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (19, N'Ö', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (20, N'P', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (21, N'R', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (22, N'S', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (23, N'Ş', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (24, N'T', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (25, N'U', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (26, N'Ü', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (27, N'V', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (28, N'Y', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (29, N'Z', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (30, N'a', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (31, N'b', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (32, N'c', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (33, N'ç', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (34, N'd', 1, CAST(N'2022-06-26T14:11:45.310' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (35, N'e', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (36, N'f', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (37, N'g', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (38, N'ğ', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (39, N'h', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (40, N'i', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (41, N'ı', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (42, N'j', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (43, N'k', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (44, N'l', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (45, N'm', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (46, N'n', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (47, N'o', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (48, N'ö', 1, CAST(N'2022-06-26T14:11:45.313' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (49, N'p', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (50, N'r', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (51, N's', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (52, N'ş', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (53, N't', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (54, N'u', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (55, N'ü', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (56, N'v', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (57, N'y', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+INSERT [dbo].[CMN_Characters] ([Id], [Name], [LanguageId], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (58, N'z', 1, CAST(N'2022-06-26T14:11:45.317' AS DateTime), NULL, 1, NULL)
+SET IDENTITY_INSERT [dbo].[CMN_Characters] OFF
+SET IDENTITY_INSERT [dbo].[CMN_Languages] ON 
+
+INSERT [dbo].[CMN_Languages] ([Id], [Name], [CreateDate], [UpdateDate], [IsActive], [IsDeleted]) VALUES (1, N'Turkish                                                                                             ', CAST(N'2022-06-26T13:12:07.237' AS DateTime), NULL, 1, NULL)
+SET IDENTITY_INSERT [dbo].[CMN_Languages] OFF
+ALTER TABLE [dbo].[CMN_Characters] ADD  CONSTRAINT [DF_Characters_CreateDate]  DEFAULT (getdate()) FOR [CreateDate]
+GO
+ALTER TABLE [dbo].[CMN_Languages] ADD  CONSTRAINT [DF_Languages_CreateDate]  DEFAULT (getdate()) FOR [CreateDate]
+GO
+ALTER TABLE [dbo].[P_RndData] ADD  CONSTRAINT [DF_RndData_CreateDate]  DEFAULT (getdate()) FOR [CreateDate]
+GO
